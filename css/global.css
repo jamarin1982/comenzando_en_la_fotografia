@@ -1,0 +1,100 @@
+body{
+  font-family: 'Dancing Script', cursive;
+  background-color: black;
+}
+
+header{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+}
+
+header h1{
+  text-align: left;
+  text-shadow: 0 0 2px #02010A;
+  color: white;
+}
+
+header nav{
+  display: flex;
+}
+
+header>nav>div{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header a{
+  color: white;
+}
+
+footer{
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  background-color: #C6d5c5;
+}
+
+footer div{
+  margin: 20px;
+}
+
+#contenido{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagina-actual a{
+  text-decoration: none;
+}
+
+.imagen-1{
+  filter: blur(10px);
+}
+
+.imagen-2, .imagen-4, .imagen-6{
+  filter: grayscale(100%);
+}
+
+.imagen-3{
+  filter: sepia(90%);
+}
+
+/*media query para dispositivos moviles*/
+@media (max-width: 900px){
+  #contenido{
+    width: 100%;
+  }
+
+  header h1{
+    text-align: center;
+  }
+
+  header nav{
+    justify-content: center;
+  }
+}
+
+/*media query para desktop*/
+@media (min-width:900px) {
+  #contenido{
+    width: 900px;
+  }
+
+  header{
+    display: flex;
+    align-items: center;
+  }
+
+  header h1{
+    flex: 1 1 60%;
+  }
+
+  header nav{
+    flex: 1 1 40%;
+    justify-content: flex-end;
+  }
+
+  footer div{
+    flex: 1 1 25%;
+  }
+}

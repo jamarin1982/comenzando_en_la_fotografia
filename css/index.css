@@ -1,0 +1,54 @@
+@import 'global.css';
+
+#imagen-secundaria{
+  display: flex;
+  background-color: #d5c75f;
+}
+
+#imagen-secundaria article{
+  text-align: center;
+  margin: 20px;
+  display: inline-block;
+}
+
+#imagen-central{
+  background-color: #82c3a6;
+  text-align: center;
+}
+
+#imagen-central>img{
+  width: 80%;
+  margin: 20px;
+}
+
+#imagen-secundaria>article img{
+  width: 100%
+}
+
+.paisajes:hover{
+  transform: rotate(10deg);
+}
+
+.paisajes, .retratos{
+  text-shadow: 0 0 2px #82c3a6;
+  border: 2px;
+  transition: transform 1s;
+}
+
+.retratos:hover{
+  transform: translate(20px, -5px);
+}
+
+/*media query para dispositivos moviles*/
+@media (max-width: 900px){
+  #imagen-secundaria, #contenido-paisajes, footer{
+    flex-flow: column;
+  }
+}
+
+/*media query para desktop*/
+@media (min-width:900px) {
+  #imagen-secundaria>article{
+    flex: 1 1 50%;
+  }
+}
